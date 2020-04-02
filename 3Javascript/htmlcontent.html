@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Change content</title>  
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: green;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .great{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="bluebox" id="facebook">
+        <p>Facebook is <span class="great">great</span></p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>Apple</p>
+    </div>
+    <div class="greenbox">
+        <p>Microsoft</p>
+    </div>
+    <button id="button1">Change facebook Content</button>
+    <button id="button2">Change apple Content</button>
+    <script>
+        document.getElementById("button1").onclick=function(){
+//            document.getElementById("facebook").innerHTML="<p>Facebook</p>";
+            document.getElementById("facebook").style.width="200px"; document.getElementById("facebook").style.backgroundColor="purple";
+           
+            document.getElementById("facebook").style.width="200px";
+        }
+        document.getElementById("button2").ondblclick=function(){
+            document.getElementById("apple").innerHTML="<ul><li>Holi</li><li>Holi</li><li>Holi</li><li>Holi</li><li>Holi</li><li>Holi</li><li>Holi</li><li>Holi</li></ul>";
+        }
+    </script>
+</body>
+
+</html>

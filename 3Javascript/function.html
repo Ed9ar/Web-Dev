@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>functions and objects</title>  
+    <style>
+        .bluebox{
+            background-color: #3A5795;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .yellowbox{
+            background-color: rgb(222, 224, 85);
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .greenbox{
+            background-color: green;
+            color: white;
+            height: 100px;
+            width: auto;
+        }
+        .great{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="bluebox" id="facebook">
+        <p>Facebook is <span class="great">great</span></p>
+    </div>
+    <div class="yellowbox" id="apple">
+        <p>Apple</p>
+    </div>
+    <div class="greenbox">
+        <p>Microsoft</p>
+    </div>
+    <button id="button1" onclick="swap('facebook','apple')">Change facebook Content</button>
+    <button id="button2">Change apple Content</button>
+    <script>
+    function greeting1(){
+        window.alert('hello');
+    }
+    function swap(element1, element2){
+        var y = document.getElementById(element1).innerHTML;
+        document.getElementById(element1).innerHTML = document.getElementById(element2).innerHTML;
+        document.getElementById(element2).innerHTML = y;
+    }
+    
+    var myPhone = {
+        make : "Apple",
+        model : "iPhone 4",
+        warranty : 10,
+        color : "white"
+    };
+    
+        function phone(make, model, warranty){
+            this.make = make;
+            this.model = model;
+            this.warranty = warranty;
+            this.extendWarranty = function(x){
+                this.warranty = this.warranty+x;
+            }
+        }
+    var iPhone = phone("Apple", "iPhone", 10);
+    iPhone.extendWarranty(12);
+    var myCar = new Object();
+    myCar.make = "Tsuru";
+    delete.myPhone.warranty;
+        
+    var shoppinglist = ["bread", "yoghurt"];
+    //usar delete(index)
+    //shoppingList.splice(1,1);
+    //shoppingList.sort();
+    var myString = "ABAUS";
+    var myArray = myString.split();
+    </script>
+    
+</body>
+
+</html>

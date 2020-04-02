@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Speed</title>  
+</head>
+<body>
+   <p> Speed: <input id = "speed" type = number /><button onclick="checkSpeed()">Check</button></p>
+    <p>String: <span id ="string"></span></p>
+    <p>Pattern: <span id = "pattern"></span></p>
+    <p>Result(search): <span id ="search"></span></p>
+    <p>Result(match): <span id ="match"></span></p>
+    <p>Result(test): <span id ="test"></span></p>
+    
+    <script>
+    function checkSpeed(){
+        var speed = document.getElementById("speed").value;
+        if(speed > 70){
+            window.alert("You are fast");
+        }
+        else if(speed < 30){
+            window.alert("You are slow");
+        }
+    }
+    
+    var str = "Atlanta76287639726352";
+    var pattern = /[4-7]/g;
+    
+    document.getElementById("string").innerHTML = str;
+    document.getElementById("pattern").innerHTML = pattern;
+    document.getElementById("search").innerHTML = str.search(pattern);
+    document.getElementById("match").innerHTML = str.match(pattern);
+    document.getElementById("test").innerHTML = pattern.test(str);
+    </script>
+</body>
+    
+</html>

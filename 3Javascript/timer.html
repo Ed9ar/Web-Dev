@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>dd</title>
+    </head>
+    <body>
+        <p id="counter">0</p>
+
+        <script>      
+            var x = 0;
+            var counter = document.getElementById("counter");
+            
+            var myCounter = setInterval(function(){x++;counter.innerHTML = x},1000);
+        </script>
+    </body>
+</html>
