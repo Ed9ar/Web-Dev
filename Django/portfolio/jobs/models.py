@@ -4,3 +4,4 @@ class Job(models.Model):
     image = models.ImageField(upload_to='images/')
     description = models.CharField(max_length=200)
 
+
